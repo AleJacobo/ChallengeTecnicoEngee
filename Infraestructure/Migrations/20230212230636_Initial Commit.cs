@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace ChallengeTecnicoEngee.Infraestructure.Migrations
 {
     /// <inheritdoc />
-    public partial class initialcommit : Migration
+    public partial class InitialCommit : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

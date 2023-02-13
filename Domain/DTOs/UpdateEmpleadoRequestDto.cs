@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace ChallengeTecnicoEngee.Domain.DTOs
 {
-    public class CreateEmpleadoRequestDto
+    public class UpdateEmpleadoRequestDto
     {
         [Required]
         public string Nombres { get; set; }
-
+        
         [Required]
         public string Apellidos { get; set; }
         
