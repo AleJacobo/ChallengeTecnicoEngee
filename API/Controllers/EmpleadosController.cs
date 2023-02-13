@@ -133,7 +133,7 @@ namespace ChallengeTecnicoEngee.API.Controllers
         {
             await _empleadosService.Delete(id);
             return Ok();
-        } 
+        }
         #endregion
     }
 }

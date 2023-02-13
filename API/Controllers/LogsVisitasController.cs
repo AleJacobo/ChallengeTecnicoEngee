@@ -15,15 +15,16 @@ namespace ChallengeTecnicoEngee.API.Controllers
         public LogsVisitasController(ILogsVisitaService logsVisitaService)
         {
             _logsVisitaService = logsVisitaService;
-        } 
+        }
         #endregion
 
+        #region Methods
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] RenaperRequestDto request)
         {
             var response = new Result();
 
-            if(request == null || (request.Apellido.IsNullOrEmpty() && request.Nombres.IsNullOrEmpty()))
+            if (request == null || (request.Apellido.IsNullOrEmpty() && request.Nombres.IsNullOrEmpty()))
             {
                 await response.Fail("Se debe especificar nombre/s y apellido/s del visitante");
                 return BadRequest(response);
@@ -56,6 +57,7 @@ namespace ChallengeTecnicoEngee.API.Controllers
             await _logsVisitaService.Delete(id);
 
             return Ok();
-        }
+        } 
+        #endregion
     }
 }

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace ChallengeTecnicoEngee.Domain.DTOs
 {
@@ -14,7 +9,7 @@ namespace ChallengeTecnicoEngee.Domain.DTOs
 
         [Required]
         public string Apellidos { get; set; }
-        
+
         [Required]
         public long SectorId { get; set; }
     }

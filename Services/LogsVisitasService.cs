@@ -1,5 +1,4 @@
 ﻿using ChallengeTecnicoEngee.Domain.DTOs;
-using ChallengeTecnicoEngee.Domain.Entities;
 using ChallengeTecnicoEngee.Services.Interfaces;
 using Domain.Entities;
 using Domain.Exceptions;
@@ -10,12 +9,15 @@ namespace ChallengeTecnicoEngee.Services
 {
     public class LogsVisitasService : ILogsVisitaService
     {
+        #region Constructor
         private readonly ApplicationDbContext _context;
         public LogsVisitasService(ApplicationDbContext context)
         {
             _context = context;
         }
+        #endregion
 
+        #region Methods
         public async Task Create(RenaperRequestDto request)
         {
             if (!request.Visita.SectorId.HasValue || !request.Visita.EmpleadoVisitadoId.HasValue)
@@ -67,5 +69,6 @@ namespace ChallengeTecnicoEngee.Services
             _context.Update(visita);
             await _context.SaveChangesAsync();
         }
+        #endregion
     }
 }

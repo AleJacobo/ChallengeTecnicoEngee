@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ChallengeTecnicoEngee.Domain.DTOs
+﻿namespace ChallengeTecnicoEngee.Domain.DTOs
 {
     public class CreateLogVisitaRequestDto
     {
