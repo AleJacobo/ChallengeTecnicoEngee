@@ -2,7 +2,7 @@
 
 namespace ChallengeTecnicoEngee.Domain.DTOs
 {
-    public class CreateEmpleadoRequestDto
+    public class UpdateEmpleadoRequestDto
     {
         [Required]
         public string Nombres { get; set; }

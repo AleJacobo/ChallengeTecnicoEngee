@@ -1,9 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Domain.Interfaces.Entities;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Domain.Entities.EntityBases
 {
-    public abstract class EntityBase
+    public abstract class EntityBase : ISoftDelete, IAuditable
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]

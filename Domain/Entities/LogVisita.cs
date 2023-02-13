@@ -9,7 +9,7 @@ namespace Domain.Entities
     {
         public string NombresVisitante { get; set; }
         public string ApellidosVisitante { get; set; }
-        public long? NumeroDocumentoVisitante { get; set; }
+        public string NumeroDocumentoVisitante { get; set; }
         public DateTime FechaHoraIngreso { get; set; }
         public string NumeroTarjetaIngreso { get; set; }
 

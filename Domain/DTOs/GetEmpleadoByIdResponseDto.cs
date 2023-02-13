@@ -1,6 +1,6 @@
 ﻿namespace ChallengeTecnicoEngee.Domain.DTOs
 {
-    public class GetAllEmpleadosResponseDto
+    public class GetEmpleadoByIdResponseDto
     {
         public long EmpleadoId { get; set; }
         public string NombreCompleto { get; set; }
