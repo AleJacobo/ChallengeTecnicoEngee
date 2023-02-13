@@ -19,6 +19,12 @@ namespace ChallengeTecnicoEngee.API.Controllers
         #endregion
 
         #region Methods
+
+        /// <summary>
+        /// Creacion de una visita al edificio
+        /// </summary>
+        /// <param name="request">objeto compuesto, que tiene tanto el request solicitado de renaper como la request para la creacion como tal</param>
+        /// <returns></returns>
         [HttpPost]
         public async Task<IActionResult> Create([FromBody] RenaperRequestDto request)
         {
@@ -35,6 +41,10 @@ namespace ChallengeTecnicoEngee.API.Controllers
             return Ok();
         }
 
+        /// <summary>
+        /// Obtiene todos las visitas
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public async Task<ActionResult<IEnumerable<GetLogsVisitaResponseDto>>> GetAll()
         {
@@ -51,6 +61,11 @@ namespace ChallengeTecnicoEngee.API.Controllers
             return Ok(visitas);
         }
 
+        /// <summary>
+        /// Eliminacion de una visita
+        /// </summary>
+        /// <param name="id">de la visita a eliminar</param>
+        /// <returns></returns>
         [HttpDelete("{id}")]
         public async Task<IActionResult> Delete([FromRoute] long id)
         {
